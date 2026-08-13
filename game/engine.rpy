@@ -381,6 +381,8 @@ label battle(e, escapable=False, returnStamina=0, escapeTurn=0):
             
                 $ stats["Stamina"].damage(currentDamage)
                 bn "You took [currentDamage] damage!"
+                hide screen enemyStatScreen with moveoutright
+                show screen itemMenu with moveinright
                 window show
                 return "escaped"
 
@@ -446,6 +448,7 @@ label battle(e, escapable=False, returnStamina=0, escapeTurn=0):
                 $ stats["Skill"].restore(1)
                 $ dwarfPotion = False
 
+            window show
             return
         
         if e.stamina <= returnStamina:
@@ -520,6 +523,8 @@ label multibattle(enemies, escapable=False, escapeTurn=0):
             
                     $ stats["Stamina"].damage(currentDamage)
                     bn "You took [currentDamage] damage!"
+                    hide screen enemyStatScreen with moveoutright
+                    show screen itemMenu with moveinright
                     window show
                     return "escaped"
             python:
