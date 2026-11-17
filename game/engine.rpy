@@ -397,7 +397,7 @@ label battle(e, escapable=False, returnStamina=0, escapeTurn=0):
             bn "You hit [e.the][e.name]!"
             $ currentDamage = playerDamage
 
-            if askLuck:
+            if preferences.askLuck:
                 if renpy.confirm("Do you want to test your luck?"):
                     if stats["Luck"].test():
                         $ currentDamage += 2
