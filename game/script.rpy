@@ -859,7 +859,7 @@ label r55:
     """
 
     menu:
-        "R390":
+        "390":
             $ bearOutcome = "ran"
             jump r390
         "200":
